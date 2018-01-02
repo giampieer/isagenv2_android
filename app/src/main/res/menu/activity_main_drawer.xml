@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/proyecto"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="PROYECTO" />
+        <item
+            android:id="@+id/personal"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="PERSONAL" />
+        <item
+            android:id="@+id/seguimiento"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="SEGUIMIENTO" />
+        <item
+            android:id="@+id/cronograma"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="CRONOGRAMA" />
+    </group>
+
+    <item android:title="Ajustes">
+        <menu>
+            <item
+                android:id="@+id/modificar_usuario"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Modificar Usurio" />
+            <item
+                android:id="@+id/cambiar_contraseña"
+                android:icon="@drawable/ic_menu_send"
+                android:title="CambiarContraseña" />
+        </menu>
+    </item>
+
+</menu>

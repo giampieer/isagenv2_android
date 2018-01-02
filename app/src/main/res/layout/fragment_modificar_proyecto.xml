@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout_proyecto_modificar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout_proyecto_modificar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/imagen_proyecto_modificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/proyecto_principal"
+                app:layout_collapseMode="parallax"
+                android:transitionName="transicion_imagen_proyecto2"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_proyecto_modificar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:navigationIcon="?attr/homeAsUpIndicator"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="100sp"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/numero_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="NUMERO" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/titulo_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="TITULO" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/jefe_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="JEFE" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="100sp"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/duracion_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DURACION" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/descripcion_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DESCRIPCION" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6sp"
+                android:layout_weight="0.32">
+                <TextView
+                    android:id="@+id/fechainicio_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:hint="FECHA INICIO"
+                    android:padding="12sp"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6sp"
+                android:layout_weight="0.50">
+                <TextView
+                    android:id="@+id/fechafin_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:hint="FECHA FIN"
+                    android:padding="12sp"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/tipo_proyecto"
+                android:layout_width="match_parent"
+                android:layout_height="50sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="100sp"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/fases_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="FASES" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/gastos_proyecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="GASTOS" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_modificar_proyecto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@drawable/nuevo" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab1_modificar_proyecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="80dp"
+        android:src="@drawable/modificar"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorAccent"
+        app:pressedTranslationZ="12dp" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab1_pdf_proyecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="140dp"
+        android:src="@drawable/pdf"
+        android:visibility="invisible"
+        app:backgroundTint="@color/color_plomo"
+        app:pressedTranslationZ="12dp" />
+
+</FrameLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
